@@ -9,4 +9,16 @@ def sales_reports(log_file): # This is like creating a "View" or "Report" to vie
             print(line) # This prints out the line if condition is met
 
 
-sales_reports(log_file) # Calling the function, basically running the report. 
+# sales_reports(log_file) # Calling the function, basically running the report. 
+
+
+def melon_orders(log_file):
+    for line in log_file:
+        line = line.rstrip().split(' ')
+        count = line[2]
+        # print(count)
+        if line[2] > 10:
+            print(line)
+
+
+melon_orders(log_file)
